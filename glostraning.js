@@ -10,7 +10,10 @@ const ordbok = {
 }
 
 function tidenarute() {
-  document.getElementById("fellista").innerText =  "dina fel svar: " +fellistan.join(", ");
+
+  if (fellistan.length > 0) {
+    document.getElementById("fellista").innerText =  "dina fel svar: " +fellistan.join(", ");
+  }
   document.getElementById("rattlista").innerText =  "dina rätta svar: " +rattlistan.join(", ");
   document.getElementById("resultattext").innerText="du fick "+ ratt+"/"+totalt;
   document.getElementById("mattetal").setAttribute("class", "hidden");
